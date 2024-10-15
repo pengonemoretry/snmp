@@ -1,0 +1,1152 @@
+# WARNING: This file was auto-generated using snmp_exporter generator, manual changes will be lost.
+H3C_AP:
+  walk:
+  - 1.3.6.1.4.1.25506.2.75.2.1.1.1.2
+  - 1.3.6.1.4.1.25506.2.75.2.1.10.1.10
+  - 1.3.6.1.4.1.25506.2.75.2.1.10.1.11
+  - 1.3.6.1.4.1.25506.2.75.2.1.10.1.2
+  - 1.3.6.1.4.1.25506.2.75.2.1.10.1.4
+  - 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+  - 1.3.6.1.4.1.25506.2.75.2.1.3.1.17
+  - 1.3.6.1.4.1.25506.2.75.2.1.3.1.19
+  - 1.3.6.1.4.1.25506.2.75.2.1.3.1.20
+  - 1.3.6.1.4.1.25506.2.75.2.1.3.1.26
+  - 1.3.6.1.4.1.25506.2.75.2.1.3.1.5
+  - 1.3.6.1.4.1.25506.2.75.2.1.6.1.7
+  - 1.3.6.1.4.1.25506.2.75.2.1.6.1.8
+  - 1.3.6.1.4.1.25506.2.75.2.2.3.1.6
+  metrics:
+  - name: hh3cDot11APIPAddress
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.1.1.2
+    type: InetAddressIPv4
+    help: Represents the IP address of an AP. - 1.3.6.1.4.1.25506.2.75.2.1.1.1.2
+    indexes:
+    - labelname: hh3cDot11APID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11APID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11APTemperature2
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.10.1.10
+    type: gauge
+    help: Represents the device temperature information for AP. - 1.3.6.1.4.1.25506.2.75.2.1.10.1.10
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11APMacAddress2
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.10.1.11
+    type: PhysAddress48
+    help: Represents the MAC address of AP. - 1.3.6.1.4.1.25506.2.75.2.1.10.1.11
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11APCPURTUsage2
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.10.1.2
+    type: gauge
+    help: Represents the CPU real time usage for AP. - 1.3.6.1.4.1.25506.2.75.2.1.10.1.2
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11APMemRTUsage2
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.10.1.4
+    type: gauge
+    help: Represents the memory real time usage for AP. - 1.3.6.1.4.1.25506.2.75.2.1.10.1.4
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11CurrAPName
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+    type: DisplayString
+    help: Represents the name of AP. - 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11MaxTxPwrLvl
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.3.1.17
+    type: DisplayString
+    help: Represents the maximum transmit power. - 1.3.6.1.4.1.25506.2.75.2.1.3.1.17
+    indexes:
+    - labelname: hh3cDot11CurAPID
+      type: DisplayString
+    - labelname: hh3cDot11RadioID
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11CurAPID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11AvgRxSignalStrength
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.3.1.19
+    type: gauge
+    help: Represents the average received signal strength. - 1.3.6.1.4.1.25506.2.75.2.1.3.1.19
+    indexes:
+    - labelname: hh3cDot11CurAPID
+      type: DisplayString
+    - labelname: hh3cDot11RadioID
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11CurAPID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11HighestRxSignalStrength
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.3.1.20
+    type: gauge
+    help: Represents the highest received signal strength. - 1.3.6.1.4.1.25506.2.75.2.1.3.1.20
+    indexes:
+    - labelname: hh3cDot11CurAPID
+      type: DisplayString
+    - labelname: hh3cDot11RadioID
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11CurAPID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11AirPrimChnlBusy
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.3.1.26
+    type: gauge
+    help: Represents air interface utilization on the primary channel - 1.3.6.1.4.1.25506.2.75.2.1.3.1.26
+    indexes:
+    - labelname: hh3cDot11CurAPID
+      type: DisplayString
+    - labelname: hh3cDot11RadioID
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11CurAPID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11Channel
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.3.1.5
+    type: gauge
+    help: Represents the current channel allocation for radio. - 1.3.6.1.4.1.25506.2.75.2.1.3.1.5
+    indexes:
+    - labelname: hh3cDot11CurAPID
+      type: DisplayString
+    - labelname: hh3cDot11RadioID
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11CurAPID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11APIfInDataRate
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.6.1.7
+    type: gauge
+    help: Represents the average input data rate of this interface in latest 300 seconds.
+      - 1.3.6.1.4.1.25506.2.75.2.1.6.1.7
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    - labelname: hh3cDot11APIfIndex
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11APIfOutDataRate
+    oid: 1.3.6.1.4.1.25506.2.75.2.1.6.1.8
+    type: gauge
+    help: Represents the average output data rate of this interface in latest 300
+      seconds. - 1.3.6.1.4.1.25506.2.75.2.1.6.1.8
+    indexes:
+    - labelname: hh3cDot11APObjID
+      type: DisplayString
+    - labelname: hh3cDot11APIfIndex
+      type: gauge
+    lookups:
+    - labels:
+      - hh3cDot11APObjID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  - name: hh3cDot11ApStationCurAssocSum
+    oid: 1.3.6.1.4.1.25506.2.75.2.2.3.1.6
+    type: gauge
+    help: Represents the total number of current associated stations with this AP.
+      - 1.3.6.1.4.1.25506.2.75.2.2.3.1.6
+    indexes:
+    - labelname: hh3cDot11CurAPID
+      type: DisplayString
+    lookups:
+    - labels:
+      - hh3cDot11CurAPID
+      labelname: hh3cDot11CurrAPName
+      oid: 1.3.6.1.4.1.25506.2.75.2.1.2.1.8
+      type: DisplayString
+  version: 2
+  max_repetitions: 300
+  retries: 3
+  timeout: 1m0s
+  auth:
+    community: tuyooGame
+
+H3C_Core-Switch:
+  walk:
+  - 1.3.6.1.2.1.2
+  - 1.3.6.1.2.1.31.1.1
+  - 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.6
+  - 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.8
+  get:
+  - 1.3.6.1.2.1.1.3.0
+  metrics:
+  - name: sysUpTime
+    oid: 1.3.6.1.2.1.1.3
+    type: gauge
+    help: The time (in hundredths of a second) since the network management portion
+      of the system was last re-initialized. - 1.3.6.1.2.1.1.3
+  - name: ifHCOutOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.10
+    type: counter
+    help: The total number of octets transmitted out of the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.10
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString 
+  - name: ifHCInOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.6
+    type: counter
+    help: The total number of octets received on the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+
+  - name: ifHighSpeed
+    oid: 1.3.6.1.2.1.31.1.1.1.15
+    type: gauge
+    help: An estimate of the interface's current bandwidth in units of 1,000,000 bits
+      per second - 1.3.6.1.2.1.31.1.1.1.15
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+
+  - name: ifNumber
+    oid: 1.3.6.1.2.1.2.1
+    type: gauge
+    help: The number of network interfaces (regardless of their current state) present
+      on this system. - 1.3.6.1.2.1.2.1
+  - name: ifIndex
+    oid: 1.3.6.1.2.1.2.2.1.1
+    type: gauge
+    help: A unique value, greater than zero, for each interface - 1.3.6.1.2.1.2.2.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+  - name: ifType
+    oid: 1.3.6.1.2.1.2.2.1.3
+    type: EnumAsInfo
+    help: The type of interface - 1.3.6.1.2.1.2.2.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+    enum_values:
+      1: other
+      2: regular1822
+      3: hdh1822
+      4: ddnX25
+      5: rfc877x25
+      6: ethernetCsmacd
+      7: iso88023Csmacd
+      8: iso88024TokenBus
+      9: iso88025TokenRing
+      10: iso88026Man
+      11: starLan
+      12: proteon10Mbit
+      13: proteon80Mbit
+      14: hyperchannel
+      15: fddi
+      16: lapb
+      17: sdlc
+      18: ds1
+      19: e1
+      20: basicISDN
+      21: primaryISDN
+      22: propPointToPointSerial
+      23: ppp
+      24: softwareLoopback
+      25: eon
+      26: ethernet3Mbit
+      27: nsip
+      28: slip
+      29: ultra
+      30: ds3
+      31: sip
+      32: frameRelay
+      33: rs232
+      34: para
+      35: arcnet
+      36: arcnetPlus
+      37: atm
+      38: miox25
+      39: sonet
+      40: x25ple
+      41: iso88022llc
+      42: localTalk
+      43: smdsDxi
+      44: frameRelayService
+      45: v35
+      46: hssi
+      47: hippi
+      48: modem
+      49: aal5
+      50: sonetPath
+      51: sonetVT
+      52: smdsIcip
+      53: propVirtual
+      54: propMultiplexor
+      55: ieee80212
+      56: fibreChannel
+      57: hippiInterface
+      58: frameRelayInterconnect
+      59: aflane8023
+      60: aflane8025
+      61: cctEmul
+      62: fastEther
+      63: isdn
+      64: v11
+      65: v36
+      66: g703at64k
+      67: g703at2mb
+      68: qllc
+      69: fastEtherFX
+      70: channel
+      71: ieee80211
+      72: ibm370parChan
+      73: escon
+      74: dlsw
+      75: isdns
+      76: isdnu
+      77: lapd
+      78: ipSwitch
+      79: rsrb
+      80: atmLogical
+      81: ds0
+      82: ds0Bundle
+      83: bsc
+      84: async
+      85: cnr
+      86: iso88025Dtr
+      87: eplrs
+      88: arap
+      89: propCnls
+      90: hostPad
+      91: termPad
+      92: frameRelayMPI
+      93: x213
+      94: adsl
+      95: radsl
+      96: sdsl
+      97: vdsl
+      98: iso88025CRFPInt
+      99: myrinet
+      100: voiceEM
+      101: voiceFXO
+      102: voiceFXS
+      103: voiceEncap
+      104: voiceOverIp
+      105: atmDxi
+      106: atmFuni
+      107: atmIma
+      108: pppMultilinkBundle
+      109: ipOverCdlc
+      110: ipOverClaw
+      111: stackToStack
+      112: virtualIpAddress
+      113: mpc
+      114: ipOverAtm
+      115: iso88025Fiber
+      116: tdlc
+      117: gigabitEthernet
+      118: hdlc
+      119: lapf
+      120: v37
+      121: x25mlp
+      122: x25huntGroup
+      123: transpHdlc
+      124: interleave
+      125: fast
+      126: ip
+      127: docsCableMaclayer
+      128: docsCableDownstream
+      129: docsCableUpstream
+      130: a12MppSwitch
+      131: tunnel
+      132: coffee
+      133: ces
+      134: atmSubInterface
+      135: l2vlan
+      136: l3ipvlan
+      137: l3ipxvlan
+      138: digitalPowerline
+      139: mediaMailOverIp
+      140: dtm
+      141: dcn
+      142: ipForward
+      143: msdsl
+      144: ieee1394
+      145: if-gsn
+      146: dvbRccMacLayer
+      147: dvbRccDownstream
+      148: dvbRccUpstream
+      149: atmVirtual
+      150: mplsTunnel
+      151: srp
+      152: voiceOverAtm
+      153: voiceOverFrameRelay
+      154: idsl
+      155: compositeLink
+      156: ss7SigLink
+      157: propWirelessP2P
+      158: frForward
+      159: rfc1483
+      160: usb
+      161: ieee8023adLag
+      162: bgppolicyaccounting
+      163: frf16MfrBundle
+      164: h323Gatekeeper
+      165: h323Proxy
+      166: mpls
+      167: mfSigLink
+      168: hdsl2
+      169: shdsl
+      170: ds1FDL
+      171: pos
+      172: dvbAsiIn
+      173: dvbAsiOut
+      174: plc
+      175: nfas
+      176: tr008
+      177: gr303RDT
+      178: gr303IDT
+      179: isup
+      180: propDocsWirelessMaclayer
+      181: propDocsWirelessDownstream
+      182: propDocsWirelessUpstream
+      183: hiperlan2
+      184: propBWAp2Mp
+      185: sonetOverheadChannel
+      186: digitalWrapperOverheadChannel
+      187: aal2
+      188: radioMAC
+      189: atmRadio
+      190: imt
+      191: mvl
+      192: reachDSL
+      193: frDlciEndPt
+      194: atmVciEndPt
+      195: opticalChannel
+      196: opticalTransport
+      197: propAtm
+      198: voiceOverCable
+      199: infiniband
+      200: teLink
+      201: q2931
+      202: virtualTg
+      203: sipTg
+      204: sipSig
+      205: docsCableUpstreamChannel
+      206: econet
+      207: pon155
+      208: pon622
+      209: bridge
+      210: linegroup
+      211: voiceEMFGD
+      212: voiceFGDEANA
+      213: voiceDID
+      214: mpegTransport
+      215: sixToFour
+      216: gtp
+      217: pdnEtherLoop1
+      218: pdnEtherLoop2
+      219: opticalChannelGroup
+      220: homepna
+      221: gfp
+      222: ciscoISLvlan
+      223: actelisMetaLOOP
+      224: fcipLink
+      225: rpr
+      226: qam
+      227: lmp
+      228: cblVectaStar
+      229: docsCableMCmtsDownstream
+      230: adsl2
+      231: macSecControlledIF
+      232: macSecUncontrolledIF
+      233: aviciOpticalEther
+      234: atmbond
+      235: voiceFGDOS
+      236: mocaVersion1
+      237: ieee80216WMAN
+      238: adsl2plus
+      239: dvbRcsMacLayer
+      240: dvbTdm
+      241: dvbRcsTdma
+      242: x86Laps
+      243: wwanPP
+      244: wwanPP2
+      245: voiceEBS
+      246: ifPwType
+      247: ilan
+      248: pip
+      249: aluELP
+      250: gpon
+      251: vdsl2
+      252: capwapDot11Profile
+      253: capwapDot11Bss
+      254: capwapWtpVirtualRadio
+      255: bits
+      256: docsCableUpstreamRfPort
+      257: cableDownstreamRfPort
+      65534: switchstack
+
+  - name: h3cEntityExtCpuUsage
+    oid: 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.6
+    type: gauge
+    help: The CPU usage for this entity - 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.6
+    indexes:
+    - labelname: h3cEntityExtPhysicalIndex
+      type: gauge
+  - name: h3cEntityExtMemUsage
+    oid: 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.8
+    type: gauge
+    help: The memory usage for the entity - 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.8
+    indexes:
+    - labelname: h3cEntityExtPhysicalIndex
+      type: gauge
+
+  version: 2
+  max_repetitions: 300
+  retries: 3
+  timeout: 1m0s
+  auth:
+    community: tuyooGame
+
+H3C_Switch:
+  walk:
+  - 1.3.6.1.2.1.2
+  - 1.3.6.1.2.1.31.1.1
+  - 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.6
+  - 1.3.6.1.4.1.2011.10.2.6.1.1.1.1.8
+  - 1.3.6.1.4.1.25506.8.35.18.4.10.1.3
+  - 1.3.6.1.4.1.25506.8.35.18.1.16
+  get:
+  - 1.3.6.1.2.1.1.3.0
+  metrics:
+  - name: sysUpTime
+    oid: 1.3.6.1.2.1.1.3
+    type: gauge
+    help: The time (in hundredths of a second) since the network management portion
+      of the system was last re-initialized. - 1.3.6.1.2.1.1.3
+  - name: ifHCOutOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.10
+    type: counter
+    help: The total number of octets transmitted out of the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.10
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+  - name: ifHCInOctets
+    oid: 1.3.6.1.2.1.31.1.1.1.6
+    type: counter
+    help: The total number of octets received on the interface, including framing
+      characters - 1.3.6.1.2.1.31.1.1.1.6
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+
+  - name: ifHighSpeed
+    oid: 1.3.6.1.2.1.31.1.1.1.15
+    type: gauge
+    help: An estimate of the interface's current bandwidth in units of 1,000,000 bits
+      per second - 1.3.6.1.2.1.31.1.1.1.15
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+
+  - name: ifNumber
+    oid: 1.3.6.1.2.1.2.1
+    type: gauge
+    help: The number of network interfaces (regardless of their current state) present
+      on this system. - 1.3.6.1.2.1.2.1
+  - name: ifIndex
+    oid: 1.3.6.1.2.1.2.2.1.1
+    type: gauge
+    help: A unique value, greater than zero, for each interface - 1.3.6.1.2.1.2.2.1.1
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+  - name: ifType
+    oid: 1.3.6.1.2.1.2.2.1.3
+    type: EnumAsInfo
+    help: The type of interface - 1.3.6.1.2.1.2.2.1.3
+    indexes:
+    - labelname: ifIndex
+      type: gauge
+    lookups:
+    - labels:
+      - ifIndex
+      labelname: ifAlias
+      oid: 1.3.6.1.2.1.31.1.1.1.18
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifDescr
+      oid: 1.3.6.1.2.1.2.2.1.2
+      type: gauge
+    - labels:
+      - ifIndex
+      labelname: ifName
+      oid: 1.3.6.1.2.1.31.1.1.1.1
+      type: DisplayString
+    enum_values:
+      1: other
+      2: regular1822
+      3: hdh1822
+      4: ddnX25
+      5: rfc877x25
+      6: ethernetCsmacd
+      7: iso88023Csmacd
+      8: iso88024TokenBus
+      9: iso88025TokenRing
+      10: iso88026Man
+      11: starLan
+      12: proteon10Mbit
+      13: proteon80Mbit
+      14: hyperchannel
+      15: fddi
+      16: lapb
+      17: sdlc
+      18: ds1
+      19: e1
+      20: basicISDN
+      21: primaryISDN
+      22: propPointToPointSerial
+      23: ppp
+      24: softwareLoopback
+      25: eon
+      26: ethernet3Mbit
+      27: nsip
+      28: slip
+      29: ultra
+      30: ds3
+      31: sip
+      32: frameRelay
+      33: rs232
+      34: para
+      35: arcnet
+      36: arcnetPlus
+      37: atm
+      38: miox25
+      39: sonet
+      40: x25ple
+      41: iso88022llc
+      42: localTalk
+      43: smdsDxi
+      44: frameRelayService
+      45: v35
+      46: hssi
+      47: hippi
+      48: modem
+      49: aal5
+      50: sonetPath
+      51: sonetVT
+      52: smdsIcip
+      53: propVirtual
+      54: propMultiplexor
+      55: ieee80212
+      56: fibreChannel
+      57: hippiInterface
+      58: frameRelayInterconnect
+      59: aflane8023
+      60: aflane8025
+      61: cctEmul
+      62: fastEther
+      63: isdn
+      64: v11
+      65: v36
+      66: g703at64k
+      67: g703at2mb
+      68: qllc
+      69: fastEtherFX
+      70: channel
+      71: ieee80211
+      72: ibm370parChan
+      73: escon
+      74: dlsw
+      75: isdns
+      76: isdnu
+      77: lapd
+      78: ipSwitch
+      79: rsrb
+      80: atmLogical
+      81: ds0
+      82: ds0Bundle
+      83: bsc
+      84: async
+      85: cnr
+      86: iso88025Dtr
+      87: eplrs
+      88: arap
+      89: propCnls
+      90: hostPad
+      91: termPad
+      92: frameRelayMPI
+      93: x213
+      94: adsl
+      95: radsl
+      96: sdsl
+      97: vdsl
+      98: iso88025CRFPInt
+      99: myrinet
+      100: voiceEM
+      101: voiceFXO
+      102: voiceFXS
+      103: voiceEncap
+      104: voiceOverIp
+      105: atmDxi
+      106: atmFuni
+      107: atmIma
+      108: pppMultilinkBundle
+      109: ipOverCdlc
+      110: ipOverClaw
+      111: stackToStack
+      112: virtualIpAddress
+      113: mpc
+      114: ipOverAtm
+      115: iso88025Fiber
+      116: tdlc
+      117: gigabitEthernet
+      118: hdlc
+      119: lapf
+      120: v37
+      121: x25mlp
+      122: x25huntGroup
+      123: transpHdlc
+      124: interleave
+      125: fast
+      126: ip
+      127: docsCableMaclayer
+      128: docsCableDownstream
+      129: docsCableUpstream
+      130: a12MppSwitch
+      131: tunnel
+      132: coffee
+      133: ces
+      134: atmSubInterface
+      135: l2vlan
+      136: l3ipvlan
+      137: l3ipxvlan
+      138: digitalPowerline
+      139: mediaMailOverIp
+      140: dtm
+      141: dcn
+      142: ipForward
+      143: msdsl
+      144: ieee1394
+      145: if-gsn
+      146: dvbRccMacLayer
+      147: dvbRccDownstream
+      148: dvbRccUpstream
+      149: atmVirtual
+      150: mplsTunnel
+      151: srp
+      152: voiceOverAtm
+      153: voiceOverFrameRelay
+      154: idsl
+      155: compositeLink
+      156: ss7SigLink
+      157: propWirelessP2P
+      158: frForward
+      159: rfc1483
+      160: usb
+      161: ieee8023adLag
+      162: bgppolicyaccounting
+      163: frf16MfrBundle
+      164: h323Gatekeeper
+      165: h323Proxy
+      166: mpls
+      167: mfSigLink
+      168: hdsl2
+      169: shdsl
+      170: ds1FDL
+      171: pos
+      172: dvbAsiIn
+      173: dvbAsiOut
+      174: plc
+      175: nfas
+      176: tr008
+      177: gr303RDT
+      178: gr303IDT
+      179: isup
+      180: propDocsWirelessMaclayer
+      181: propDocsWirelessDownstream
+      182: propDocsWirelessUpstream
+      183: hiperlan2
+      184: propBWAp2Mp
+      185: sonetOverheadChannel
+      186: digitalWrapperOverheadChannel
+      187: aal2
+      188: radioMAC
+      189: atmRadio
+      190: imt
+      191: mvl
+      192: reachDSL
+      193: frDlciEndPt
+      194: atmVciEndPt
+      195: opticalChannel
+      196: opticalTransport
+      197: propAtm
+      198: voiceOverCable
+      199: infiniband
+      200: teLink
+      201: q2931
+      202: virtualTg
+      203: sipTg
+      204: sipSig
+      205: docsCableUpstreamChannel
+      206: econet
+      207: pon155
+      208: pon622
+      209: bridge
+      210: linegroup
+      211: voiceEMFGD
+      212: voiceFGDEANA
+      213: voiceDID
+      214: mpegTransport
+      215: sixToFour
+      216: gtp
+      217: pdnEtherLoop1
+      218: pdnEtherLoop2
+      219: opticalChannelGroup
+      220: homepna
+      221: gfp
+      222: ciscoISLvlan
+      223: actelisMetaLOOP
+      224: fcipLink
+      225: rpr
+      226: qam
+      227: lmp
+      228: cblVectaStar
+      229: docsCableMCmtsDownstream
+      230: adsl2
+      231: macSecControlledIF
+      232: macSecUncontrolledIF
+      233: aviciOpticalEther
+      234: atmbond
+      235: voiceFGDOS
+      236: mocaVersion1
+      237: ieee80216WMAN
+      238: adsl2plus
+      239: dvbRcsMacLayer
+      240: dvbTdm
+      241: dvbRcsTdma
+      242: x86Laps
+      243: wwanPP
+      244: wwanPP2
+      245: voiceEBS
+      246: ifPwType
+      247: ilan
+      248: pip
+      249: aluELP
+      250: gpon
+      251: vdsl2
+      252: capwapDot11Profile
+      253: capwapDot11Bss
+      254: capwapWtpVirtualRadio
+      255: bits
+      256: docsCableUpstreamRfPort
+      257: cableDownstreamRfPort
+      65534: switchstack
+
+  - name: h3cEntityExtCpuUsage
+    oid: 1.3.6.1.4.1.25506.8.35.18.4.10.1.3 
+    type: gauge
+    help: The CPU usage for this entity - 1.3.6.1.4.1.25506.8.35.18.4.10.1.3
+    indexes:
+    - labelname: h3cEntityExtPhysicalIndex
+      type: gauge
+  - name: h3cEntityExtMemUsage
+    oid: 1.3.6.1.4.1.25506.8.35.18.1.16
+    type: gauge
+    help: The memory usage for the entity - 1.3.6.1.4.1.25506.8.35.18.1.16
+    indexes:
+    - labelname: h3cEntityExtPhysicalIndex
+      type: gauge
+
+  version: 2
+  max_repetitions: 300
+  retries: 3
+  timeout: 2m0s
+  auth:
+    community: tuyooGame
+
+HY_Array-VPN:
+  walk:
+  - 1.3.6.1.4.1.7564.30.1
+  get:
+  - 1.3.6.1.2.1.1.3.0
+  - 1.3.6.1.4.1.7564.21.1.0
+  - 1.3.6.1.4.1.7564.21.10.0
+  - 1.3.6.1.4.1.7564.21.11.0
+  - 1.3.6.1.4.1.7564.21.5.0
+  - 1.3.6.1.4.1.7564.21.6.0
+  - 1.3.6.1.4.1.7564.22.3.0
+  - 1.3.6.1.4.1.7564.30.4.0
+  metrics:
+  - name: sysUpTime
+    oid: 1.3.6.1.2.1.1.3
+    type: gauge
+    help: The time (in hundredths of a second) since the network management portion
+      of the system was last re-initialized. - 1.3.6.1.2.1.1.3
+  - name: numSessions
+    oid: 1.3.6.1.4.1.7564.21.1
+    type: counter
+    help: Number of sessions by the security proxy. - 1.3.6.1.4.1.7564.21.1
+  - name: totalServerBytesIn
+    oid: 1.3.6.1.4.1.7564.21.10
+    type: counter 
+    help: Number of Total Bytes In from backend server. - 1.3.6.1.4.1.7564.21.10
+  - name: totalServerBytesOut
+    oid: 1.3.6.1.4.1.7564.21.11
+    type: counter
+    help: Number of Total Bytes Out to backend server. - 1.3.6.1.4.1.7564.21.11
+  - name: totalClientBytesIn
+    oid: 1.3.6.1.4.1.7564.21.5
+    type: counter
+    help: Number of Total Bytes In from front client. - 1.3.6.1.4.1.7564.21.5
+  - name: totalClientBytesOut
+    oid: 1.3.6.1.4.1.7564.21.6
+    type: counter
+    help: Number of Total Bytes Out to front client. - 1.3.6.1.4.1.7564.21.6
+  - name: currentTime
+    oid: 1.3.6.1.4.1.7564.22.3
+    type: DisplayString
+    help: The current time in the format of MM/DD/YY HH:MM - 1.3.6.1.4.1.7564.22.3
+  - name: memoryUtilization
+    oid: 1.3.6.1.4.1.7564.30.4
+    type: gauge
+    help: Current percentage of memory utilization - 1.3.6.1.4.1.7564.30.4
+  - name: cpuUtilization
+    oid: 1.3.6.1.4.1.7564.30.1
+    type: gauge
+    help: Current percentage of cpu utilization - 1.3.6.1.4.1.7564.30.1
+  version: 2
+  max_repetitions: 300
+  retries: 3
+  timeout: 1m0s
+  auth:
+    community: hardware
+
+HY_Array-VPN-mes:
+  walk:
+  - 1.3.6.1.4.1.7564.24.2.2.1.3
+  - 1.3.6.1.4.1.7564.30.1
+  get:
+  - 1.3.6.1.2.1.1.3.0
+  - 1.3.6.1.4.1.7564.21.1.0
+  - 1.3.6.1.4.1.7564.21.10.0
+  - 1.3.6.1.4.1.7564.21.11.0
+  - 1.3.6.1.4.1.7564.21.5.0
+  - 1.3.6.1.4.1.7564.21.6.0
+  - 1.3.6.1.4.1.7564.22.3.0
+  - 1.3.6.1.4.1.7564.30.4.0
+  metrics:
+  - name: msgText
+    oid: 1.3.6.1.4.1.7564.24.2.2.1.3
+    type: DisplayString
+    help: The text of the message - 1.3.6.1.4.1.7564.24.2.2.1.3
+    indexes:
+    - labelname: index
+      type: DisplayString
+  version: 1
+  max_repetitions: 300
+  retries: 3
+  timeout: 1m0s
+  auth:
+    community: hardware
